@@ -17,6 +17,24 @@ public class MergeSort {
      ******************************************************/
     private static int[] merge( int[] a, int[] b ) 
     {
+	    int countA = 0;
+	    int countB = 0;
+	    int[] ab = new int[ a.length + b.length];
+	    while(countA != a.length - 1 && countB != b.length - 1){
+		    if(a[countA] > b[countB]){
+			    ab[countA + countB] = a[countA];
+			    countA++;
+		    }
+		     else if(a[countA] < b[countB]){
+			    ab[countA + countB] = b[countB];
+			    countB++;
+		     }else{
+			     ab[countA + countB] = a[countA];
+			    countA++;
+		     }
+			    	
+	    }
+		    
 
     }//end merge()
 
